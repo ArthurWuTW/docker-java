@@ -1,9 +1,0 @@
-# OpenJDK is the open source JAVA
-# Recommanded: Install Oracle JAVA instead!
-
-
-# Install Java Runtime Environment and JDK
-RUN apt-get update && \
-    apt-get install -y \
-        default-jre \
-        default-jdk

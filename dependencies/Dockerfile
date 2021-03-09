@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:20.04
 MAINTAINER "ArthurWuTw <lion811004@gmail.com>"
 
 ARG CONTAINER_USER
@@ -40,13 +40,8 @@ RUN apt-get update \
         vim \
         gcc
 
-# Install Java
-# Create user
-COPY install-OpenJDK utils.sh ./
-RUN ./install-OpenJDK && \
-  rm install-OpenJDK utils.sh
-
-
+# Install OpenJDK
+RUN sudo apt install -y openjdk-11-jdk
 
 COPY enter-container-shell \
     infinite-loop \
