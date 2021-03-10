@@ -38,7 +38,8 @@ RUN apt-get update \
         git-core \
         net-tools \
         vim \
-        gcc
+        gcc \
+        maven
 
 # Install OpenJDK
 RUN sudo apt install -y openjdk-11-jdk
