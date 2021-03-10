@@ -23,9 +23,10 @@ parse_arguments() {
 run_container() {
 
     docker run \
-        --privileged \
+        --privileged=true \
         --name $CONTAINER_NAME \
         --rm \
+        --volume $HOME/Desktop:/home/$CONTAINER_USER/Desktop \
         --user $CONTAINER_USER \
         $EXTRA_CONTAINER_OPTS \
         $GRAPHICS_OPTS \
