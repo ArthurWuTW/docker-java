@@ -32,6 +32,8 @@ pipeline {
                 sh '''  
                     #!/bin/bash
                     cd /home/arthur/Desktop/jenkins-tmp-dir
+                    cp ./3party/eclipse-jee-2020-03-R-incubation-linux-gtk-x86_64.tar.gz \
+                        ./docker-java/dependencies/eclipse_tar_dir/
                 '''
             }
         }
