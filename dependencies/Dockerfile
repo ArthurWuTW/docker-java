@@ -45,6 +45,9 @@ COPY install-java utils.sh ./
 RUN ./install-java
 RUN rm install-java utils.sh
 
+ENV PATH="/home/${CONTAINER_USER}/lib/zulu8.56.0.21-ca-jdk8.0.302-linux_x64/bin:${PATH}"
+ENV JAVA_HOME="/home/${CONTAINER_USER}/lib/zulu8.56.0.21-ca-jdk8.0.302-linux_x64"
+
 COPY enter-container-shell \
     infinite-loop \
     /usr/local/bin/
