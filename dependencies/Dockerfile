@@ -38,11 +38,7 @@ RUN apt-get update \
         git-core \
         net-tools \
         vim \
-        gcc \
-        maven
-
-# Install OpenJDK
-RUN sudo apt install -y openjdk-11-jdk
+        gcc
 
 COPY enter-container-shell \
     infinite-loop \
