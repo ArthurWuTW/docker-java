@@ -6,3 +6,10 @@ export EXTRA_CONTAINER_OPTS="\
 "
 
 $(dirname $0)/run-container $@
+
+source $(dirname $0)/project/common.sh
+docker exec \
+  -d \
+  $CONTAINER_NAME \
+  /bin/sh -c \
+  "/home/$CONTAINER_NAME/tomcat/apache-tomcat-10.0.8/bin/start.sh"
