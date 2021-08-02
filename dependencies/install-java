@@ -8,4 +8,4 @@ cd lib
 wget https://cdn.azul.com/zulu/bin/zulu8.56.0.21-ca-jdk8.0.302-linux_x64.tar.gz || exit_on_error
 tar -xvf zulu8.56.0.21-ca-jdk8.0.302-linux_x64.tar.gz --directory ./
 chown ${CONTAINER_USER:?}:${CONTAINER_USER:?} /home/${CONTAINER_USER:?}/lib/*
-su -c 'export PATH=/home/'${CONTAINER_USER:?}'/lib/zulu8.56.0.21-ca-jdk8.0.302-linux_x64/bin:${PATH} && export JAVA_HOME=/home/'${CONTAINER_USER:?}'/lib/zulu8.56.0.21-ca-jdk8.0.302-linux_x64
+su -c 'export PATH=/home/'${CONTAINER_USER:?}'/lib/zulu8.56.0.21-ca-jdk8.0.302-linux_x64/bin:${PATH} && export JAVA_HOME=/home/'${CONTAINER_USER:?}'/lib/zulu8.56.0.21-ca-jdk8.0.302-linux_x64'

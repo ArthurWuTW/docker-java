@@ -7,6 +7,16 @@ pipeline {
 
     stages {
 
+        stage('Delete old Repo') {
+            steps {
+                sh '''  
+                    #!/bin/bash
+                    cd /home/arthur/Desktop/jenkins-tmp-dir
+                    rm -rf docker-java || echo 'No repo exists!'
+                '''
+            }
+        }
+
         stage('Clone Respository') {
             steps {
                 sh '''  
