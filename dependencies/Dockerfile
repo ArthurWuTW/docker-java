@@ -49,7 +49,7 @@ ENV PATH="/home/${CONTAINER_USER}/lib/zulu8.56.0.21-ca-jdk8.0.302-linux_x64/bin:
 ENV JAVA_HOME="/home/${CONTAINER_USER}/lib/zulu8.56.0.21-ca-jdk8.0.302-linux_x64"
 
 # Install eclipse
-COPY install-eclipse util.sh eclipse_tar_dir/eclipse-jee-2020-03-R-incubation-linux-gtk-x86_64.tar.gz ./
+COPY install-eclipse utils.sh eclipse_tar_dir/eclipse-jee-2020-03-R-incubation-linux-gtk-x86_64.tar.gz ./
 RUN ./install-eclipse
 RUN rm install-eclipse util.sh eclipse-jee-2020-03-R-incubation-linux-gtk-x86_64.tar.gz
 
