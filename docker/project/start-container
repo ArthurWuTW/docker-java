@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+set -x
 export EXTRA_CONTAINER_OPTS="\
     --detach \
     --init
@@ -12,4 +12,4 @@ docker exec \
   -d \
   $CONTAINER_NAME \
   /bin/sh -c \
-  "/home/$CONTAINER_NAME/tomcat/apache-tomcat-10.0.8/bin/start.sh"
+  "/home/user/tomcat/apache-tomcat-10.0.8/bin/start.sh"
