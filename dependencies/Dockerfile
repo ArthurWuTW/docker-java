@@ -40,6 +40,11 @@ RUN apt-get update \
         vim \
         gcc
 
+# Install zulu openjdk
+COPY install-java utils.sh ./
+RUN ./install-java
+RUN rm install-java utils.sh
+
 COPY enter-container-shell \
     infinite-loop \
     /usr/local/bin/
