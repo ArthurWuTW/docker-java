@@ -7,7 +7,7 @@ export EXTRA_CONTAINER_OPTS="\
 
 $(dirname $0)/run-container $@
 
-source $(dirname $0)/project/common.sh
+source $(dirname $0)/common.sh
 docker exec \
   -d \
   $CONTAINER_NAME \
