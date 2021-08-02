@@ -28,7 +28,7 @@ run_container() {
         --privileged=true \
         --name $CONTAINER_NAME \
         --rm \
-        --volume $HOME/Desktop:/home/$CONTAINER_USER/Desktop \
+        --volume $HOST_HOME/Desktop:/home/$CONTAINER_USER/Desktop \
         --user $CONTAINER_USER \
         -p 7002:7002 \
         $EXTRA_CONTAINER_OPTS \

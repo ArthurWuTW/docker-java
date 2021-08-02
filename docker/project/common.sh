@@ -4,3 +4,4 @@ DOCKER_DIR=$REPO_DIR
 IMAGE_NAME=${IMAGE_NAME:-project-java-tomcat}
 CONTAINER_USER=user
 CONTAINER_NAME=project-java-tomcat
+HOST_HOME=/home/arthur
