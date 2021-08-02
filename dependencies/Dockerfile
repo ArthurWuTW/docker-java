@@ -54,6 +54,11 @@ COPY install-eclipse utils.sh eclipse_tar_dir/eclipse-jee-2020-03-R-incubation-l
 RUN ./install-eclipse
 RUN rm install-eclipse utils.sh eclipse-jee-2020-03-R-incubation-linux-gtk-x86_64.tar.gz
 
+# Install tomcat
+COPY install-tomcat utils.sh
+RUN ./install-tomcat
+RUN rm install-tomcat utils.sh
+
 COPY enter-container-shell \
     infinite-loop \
     /usr/local/bin/
