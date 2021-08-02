@@ -58,6 +58,8 @@ RUN rm install-eclipse utils.sh eclipse-jee-2020-03-R-incubation-linux-gtk-x86_6
 COPY install-tomcat utils.sh ./
 RUN ./install-tomcat
 RUN rm install-tomcat utils.sh
+# Port 7001 configuration
+COPY tomcat_conf_dir/server.xml /home/${CONTAINER_USER}/tomcat/apache-tomcat-10.0.8/conf/
 
 COPY enter-container-shell \
     infinite-loop \
