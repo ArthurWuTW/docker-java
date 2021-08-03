@@ -31,6 +31,7 @@ run_container() {
         --volume $HOST_HOME/Desktop:/home/$CONTAINER_USER/Desktop \
         --user $CONTAINER_USER \
         -p 7002:7002 \
+        -p 7003:8080 \
         $EXTRA_CONTAINER_OPTS \
         $GRAPHICS_OPTS \
         $IMAGE_NAME \
