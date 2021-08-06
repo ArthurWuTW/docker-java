@@ -12,4 +12,4 @@ docker exec \
   -d \
   $CONTAINER_NAME \
   /bin/sh -c \
-  "/home/$CONTAINER_USER/tomcat/apache-tomcat-10.0.8/bin/startup.sh"
+  "/home/$CONTAINER_USER/tomcat/apache-tomcat-9.0.50/bin/startup.sh"
