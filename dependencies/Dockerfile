@@ -61,6 +61,11 @@ RUN rm install-tomcat utils.sh
 # Port 7001 configuration
 COPY tomcat_conf_dir/server.xml /home/${CONTAINER_USER}/tomcat/apache-tomcat-9.0.50/conf/
 
+# Install DBeaver
+COPY install-dbeaver utils.sh ./
+RUN ./install-dbeaver
+RUN rm install-dbeaver utils.sh
+
 COPY enter-container-shell \
     infinite-loop \
     /usr/local/bin/
