@@ -38,7 +38,8 @@ RUN apt-get update \
         git-core \
         net-tools \
         vim \
-        gcc
+        gcc \
+        iputils-ping
 
 # Install zulu openjdk
 COPY install-java utils.sh ./
